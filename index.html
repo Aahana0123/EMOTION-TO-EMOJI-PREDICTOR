@@ -1,0 +1,81 @@
+ <html>
+
+ <head>
+   <title>Emotion To Emoji</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+   <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Acme&family=Balsamiq+Sans&family=Courgette&family=Gabriela&family=Indie+Flower&family=Montagu+Slab:wght@100&family=Oleo+Script+Swash+Caps&family=Pacifico&family=Patrick+Hand&family=Rampart+One&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Acme&family=Balsamiq+Sans&family=Courgette&family=Gabriela&family=Indie+Flower&family=Montagu+Slab:wght@100&family=Oleo+Script&family=Oleo+Script+Swash+Caps&family=Pacifico&family=Patrick+Hand&family=Rampart+One&display=swap" rel="stylesheet">
+
+     
+ </head>
+
+ <body>
+   <div class="container">
+
+     <center>
+       <h2 class="btn btn-success heading"> Emotion To Emoji App
+         <br>
+         <span> &#128522; </span>
+         <span> &#128512; </span>
+         <span> &#128532; </span>
+         <span> &#128546; </span>
+         <span> &#128545; </span>
+         <span> &#128548; </span>
+       </h2>
+
+
+       <br><br>
+
+       <p style="font-size: 22px;">Take your selfie to generate emoji
+         <br>
+         <b style="color: rgb(72, 60, 233)">Are you Happy?</b>
+         <br>
+         <b style="color: black">Are you Sad?</b>
+         <br>
+         <b style="color: red">Are you Angry?</b>
+         <br>
+       </p>
+       <div class="col-md-4 col-sm-12 col-xs-12">
+         <label>Web Cam - </label>
+         <div id="camera"></div>
+         <br><br>
+         <button id="capture_image" onclick="capture_image()" class="btn btn-info"> Capture Image </button>
+       </div>
+
+       <div class="col-md-4 col-sm-12 col-xs-12">
+         <label> Prediction 1 </label>
+         <p id="result_emoji" class="emoji"></p>
+         <p id="result_emotion_name" class="emotion_name">  </p>
+
+         <label> Prediction 2 </label>
+         <p id="result_emoji2" class="emoji"></p>
+         <p id="result_emotion_name2" class="emotion_name">  </p>
+       </div>
+
+
+       <div class="col-md-4 col-sm-12 col-xs-12">
+         <label>Snapshot - </label>
+         <div id="result"></div>
+         <br><br>
+         <button id="predict_emotion" onclick="predict_emotion()" class="btn btn-info"> Predict Emotion </button>
+       </div>
+
+     </center>
+
+   </div>
+
+   <script src="main.js"></script>
+
+ </body>
+
+ </html>
